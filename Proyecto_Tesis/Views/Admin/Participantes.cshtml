@@ -1,0 +1,42 @@
+@model Proyecto_Tesis.ViewModels.Admin.ParticipantesIndexViewModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Participantes";
+}
+<section class="panel-card">
+    <div class="panel-heading">
+        <div><span class="admin-eyebrow">Investigación</span><h2>Participantes registrados</h2><small class="text-muted">@Model.TotalRegistros registro(s)</small></div>
+        <form method="get" class="search-form">
+            <input name="q" value="@Model.Busqueda" class="form-control" placeholder="Buscar P-000001" aria-label="Buscar participante" />
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+    </div>
+    <div class="table-responsive">
+        <table class="table admin-table align-middle">
+            <thead><tr><th>Código</th><th>Registro</th><th>Progreso</th><th>Estado</th><th>Resultado</th><th></th></tr></thead>
+            <tbody>
+            @foreach (var item in Model.Participantes)
+            {
+                var pasos = (item.Consentimiento ? 1 : 0) + (item.Cognitivo ? 1 : 0) + (item.Emocional ? 1 : 0) + (item.UsoIA ? 1 : 0) + (item.Sus ? 1 : 0);
+                <tr>
+                    <td><strong>@item.Codigo</strong></td>
+                    <td>@item.FechaRegistro.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@pasos/5</td>
+                    <td><span class="status-pill">@item.Estado</span></td>
+                    <td><span class="risk-pill @(item.Nivel == "ALTO" ? "high" : item.Nivel == "BAJO" ? "low" : "neutral")">@item.Nivel</span></td>
+                    <td><a asp-action="Detalle" asp-route-id="@item.Id">Ver</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    @if (Model.Participantes.Count == 0) { <p class="empty-state">No se encontraron participantes.</p> }
+    @if (Model.TotalPaginas > 1)
+    {
+        <nav class="pagination-wrap" aria-label="Paginación">
+            <a class="btn btn-sm btn-outline-secondary @(Model.Pagina <= 1 ? "disabled" : "")" asp-action="Participantes" asp-route-q="@Model.Busqueda" asp-route-page="@(Model.Pagina - 1)">Anterior</a>
+            <span>Página @Model.Pagina de @Model.TotalPaginas</span>
+            <a class="btn btn-sm btn-outline-secondary @(Model.Pagina >= Model.TotalPaginas ? "disabled" : "")" asp-action="Participantes" asp-route-q="@Model.Busqueda" asp-route-page="@(Model.Pagina + 1)">Siguiente</a>
+        </nav>
+    }
+</section>

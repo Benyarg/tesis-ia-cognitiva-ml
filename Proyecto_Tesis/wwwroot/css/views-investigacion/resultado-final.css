@@ -1,0 +1,90 @@
+﻿.result-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.header-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1e3a8a;
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 800;
+}
+
+.btn-generar {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .btn-generar:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
+    }
+
+#resultadoBox {
+    margin: 30px auto;
+    padding: 35px 25px;
+    border-radius: 24px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.res-text-main {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.res-text-sub {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Clase nueva para el mensaje de agradecimiento */
+.thanks-footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+}

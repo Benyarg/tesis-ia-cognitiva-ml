@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Evaluación de Usabilidad (SUS)";
+}
+<link href="~/css/views-investigacion/sus.css" rel="stylesheet" />
+
+<div class="sus-container">
+    <div class="header-card">
+        <h2>Evaluación de Usabilidad</h2>
+        <p style="color: #475569; font-size: 0.9rem;">
+            Tu opinión es fundamental para mejorar la experiencia del sistema.
+        </p>
+    </div>
+
+    <div class="likert-legend">
+        <span>Muy en desacuerdo</span>
+        <span>Muy de acuerdo</span>
+    </div>
+
+    <form id="formSUS">
+        <div id="preguntasSUS">
+            <!-- Renderizado dinámico -->
+        </div>
+        <button type="submit" class="btn-enviar">Enviar Evaluación</button>
+    </form>
+
+    <p id="resultado"></p>
+</div>
+
+@section Scripts {
+    <script src="~/js/views-investigacion/sus.js" defer></script>
+}

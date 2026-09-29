@@ -1,0 +1,246 @@
+/* =========================================================
+   CONFIGURACIÓN GLOBAL
+   ========================================================= */
+
+:root {
+    --bg-deep: #0f172a;
+    --bg-gradient: radial-gradient( circle at 50% 0%, #1e293b 0%, #0f172a 100% );
+    --accent: #38bdf8;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --navbar-height: 72px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-deep);
+    background-image: var(--bg-gradient);
+    background-attachment: fixed;
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD / FOCUS
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #ffffff, 0 0 0 0.25rem #258cfb;
+}
+
+
+/* =========================================================
+   BOOTSTRAP / FORMULARIOS
+   ========================================================= */
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+
+/* =========================================================
+   HEADER PÚBLICO
+   ========================================================= */
+
+.public-header {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+    .public-header .navbar {
+        min-height: var(--navbar-height);
+        background: rgba(15, 23, 42, 0.88) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        position: sticky;
+        top: 0;
+    }
+
+        .public-header .navbar .container {
+            min-height: var(--navbar-height);
+            display: flex;
+            align-items: center;
+        }
+
+
+/* =========================================================
+   MARCA / LOGO
+   ========================================================= */
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1;
+}
+
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+
+.brand-logo {
+    display: block !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+    object-fit: contain !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.brand-text {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.main-container {
+    width: 100%;
+    flex: 1;
+    padding: 2rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 24px 0;
+    background: rgba(15, 23, 42, 0.92) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+}
+
+    .footer b {
+        color: var(--accent);
+        font-weight: 700;
+    }
+
+    .footer .text-muted {
+        color: var(--text-secondary) !important;
+    }
+
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+
+.fade-in-content {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+    :root {
+        --navbar-height: 64px;
+    }
+
+    .brand-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .brand-text {
+        font-size: 0.9rem;
+    }
+
+    .main-container {
+        padding: 1.5rem 1rem 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand-text {
+        font-size: 0.82rem;
+        letter-spacing: 0.025em;
+    }
+
+    .navbar-brand {
+        gap: 8px;
+    }
+}

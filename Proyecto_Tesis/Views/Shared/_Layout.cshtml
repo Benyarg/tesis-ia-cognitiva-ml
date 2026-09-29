@@ -1,0 +1,63 @@
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+@{
+    var antiforgeryTokens = Antiforgery.GetAndStoreTokens(Context);
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="csrf-token" content="@antiforgeryTokens.RequestToken" />
+
+    <title>@ViewData["Title"] - IA Cognitiva</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+
+<body>
+    <header class="public-header">
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand"
+                   asp-controller="Home"
+                   asp-action="Index"
+                   aria-label="IA Cognitiva - Inicio">
+
+                    <img src="~/img/brand/logo.png"
+                    asp-append-version="true"
+                         class="brand-logo"
+                         alt="Logo de IA Cognitiva" />
+
+                    <span class="brand-text">IA COGNITIVA</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container main-container fade-in-content">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <span class="text-muted small">
+                © 2026 IA Cognitiva · Investigación universitaria
+            </span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/security.js"></script>
+    <script src="~/js/logs.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

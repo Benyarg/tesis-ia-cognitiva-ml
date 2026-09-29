@@ -1,0 +1,118 @@
+﻿/* Estilo General armonizado con fondo azul */
+.dass-container {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 15px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.header-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.leyenda {
+    font-size: 0.8rem;
+    color: #e0e7ff; /* Color claro para resaltar sobre fondo azul */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-weight: 600;
+    background: rgba(30, 58, 138, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Estilo de las Preguntas */
+.pregunta-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.pregunta-texto {
+    color: #1e293b;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+    line-height: 1.4;
+}
+
+/* Opciones Táctiles */
+.opciones-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+    .opciones-group input[type="radio"] {
+        display: none; /* Escondemos el radio button original */
+    }
+
+.opcion-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0;
+    border-radius: 12px;
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    font-size: 1.1rem;
+}
+
+/* Estado seleccionado */
+.opciones-group input[type="radio"]:checked + .opcion-label {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    border-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+/* Botón de envío */
+.btn-enviar {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+    .btn-enviar:active {
+        transform: scale(0.98);
+    }
+
+#resultado {
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(34, 197, 94, 0.8);
+    border-radius: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "DASS-21";
+}
+<link href="~/css/views-investigacion/test-emocional.css" rel="stylesheet" />
+
+<div class="dass-container">
+    <div class="header-card">
+        <h2>Cuestionario DASS-21</h2>
+        <p style="color: #475569; font-size: 0.9rem;">
+            Responde todas las preguntas según cómo te has sentido <b>esta última semana</b>.
+        </p>
+    </div>
+
+    <div class="leyenda">
+        <span>0: Nunca</span>
+        <span>1: A veces</span>
+        <span>2: Frecuente</span>
+        <span>3: Siempre</span>
+    </div>
+
+    <form id="formDASS" novalidate>
+        <div id="preguntas">
+            <!-- Inyección vía JS -->
+        </div>
+        <button type="submit" class="btn-enviar">Enviar Respuestas</button>
+    </form>
+
+    <p id="resultado"></p>
+</div>
+
+@section Scripts {
+    <script src="~/js/views-investigacion/test-emocional.js" defer></script>
+}

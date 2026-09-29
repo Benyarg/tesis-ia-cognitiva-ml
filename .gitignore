@@ -1,0 +1,61 @@
+# ============================================================
+# .NET / Visual Studio
+# ============================================================
+.vs/
+**/bin/
+**/obj/
+artifacts/
+TestResults/
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ============================================================
+# Local / environment configuration
+# ============================================================
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+appsettings.*.local.json
+
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# Secrets / certificates / private keys
+# ============================================================
+secrets.json
+*.secrets.json
+*.pfx
+*.p12
+*.pem
+*.key
+*.snk
+
+# ============================================================
+# Local publishing / service metadata
+# ============================================================
+*.pubxml.user
+*.publishproj
+**/serviceDependencies.local.json
+**/serviceDependencies.local.json.user
+
+# ============================================================
+# Packages / caches / logs
+# ============================================================
+packages/
+*.cache
+*.log
+logs/
+Logs/
+
+# ============================================================
+# IDE / OS
+# ============================================================
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

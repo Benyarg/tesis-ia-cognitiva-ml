@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <UserSecretsId>
+      aspnet-Proyecto_Tesis-a1078333-7a24-4445-94ac-72aee4f76054
+    </UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <PackageReference
+        Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore"
+        Version="10.0.12" />
+
+    <PackageReference
+        Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore"
+        Version="10.0.12" />
+
+    <PackageReference
+        Include="Microsoft.EntityFrameworkCore.SqlServer"
+        Version="10.0.12" />
+
+    <PackageReference
+        Include="Microsoft.EntityFrameworkCore.Tools"
+        Version="10.0.12">
+
+      <PrivateAssets>all</PrivateAssets>
+
+      <IncludeAssets>
+        runtime;
+        build;
+        native;
+        contentfiles;
+        analyzers;
+        buildtransitive
+      </IncludeAssets>
+
+    </PackageReference>
+
+    <PackageReference
+        Include="Microsoft.ML"
+        Version="5.0.0" />
+
+    <PackageReference
+        Include="Microsoft.ML.FastTree"
+        Version="5.0.0" />
+
+    <PackageReference
+        Include="Microsoft.VisualStudio.Web.CodeGeneration.Design"
+        Version="10.0.2" />
+
+    <!-- Corrección de vulnerabilidades transitivas NU1901 -->
+
+    <PackageReference
+        Include="NuGet.Packaging"
+        Version="6.12.5"
+        PrivateAssets="all" />
+
+    <PackageReference
+        Include="NuGet.Protocol"
+        Version="6.12.5"
+        PrivateAssets="all" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <None Include="MLModel.mlnet"
+          Condition="Exists('MLModel.mlnet')">
+
+      <CopyToOutputDirectory>
+        PreserveNewest
+      </CopyToOutputDirectory>
+
+    </None>
+
+  </ItemGroup>
+
+</Project>

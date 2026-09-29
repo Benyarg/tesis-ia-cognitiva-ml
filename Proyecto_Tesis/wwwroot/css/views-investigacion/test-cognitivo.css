@@ -1,0 +1,92 @@
+﻿.test-container {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.instruction-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+/* Resaltado para el número de intentos */
+.intentos-badge {
+    display: inline-block;
+    background-color: #fee2e2; /* Un rojo/rosa muy suave para alertar */
+    color: #b91c1c;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.btn-start-light {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 25px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+    .btn-start-light:active {
+        background-color: #c7d2fe;
+        transform: scale(0.98);
+    }
+
+#box {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bg-waiting {
+    background-color: #64748b;
+    border: 4px solid rgba(255,255,255,0.2);
+}
+
+.results-panel {
+    margin-top: 25px;
+}
+
+#resultado {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(79, 70, 229, 0.8);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}

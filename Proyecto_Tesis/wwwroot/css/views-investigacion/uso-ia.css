@@ -1,0 +1,115 @@
+﻿/* Contenedor alineado al estilo de la plataforma */
+.ia-container {
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 20px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.header-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+/* Estilo para los grupos de entrada */
+.input-group {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+label {
+    display: block;
+    color: #1e293b;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+/* Inputs numéricos estilizados */
+input[type="number"] {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    font-size: 1.1rem;
+    color: #334155;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+    input[type="number"]:focus {
+        border-color: #4f46e5;
+    }
+
+/* Diseño táctil para los Radio Buttons (Tipo de Uso) */
+.radio-card-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .radio-card-group input[type="radio"] {
+        display: none;
+    }
+
+.radio-label {
+    display: block;
+    padding: 15px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.radio-card-group input[type="radio"]:checked + .radio-label {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    border-color: #4f46e5;
+}
+
+/* Botón de acción */
+.btn-guardar {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+    .btn-guardar:active {
+        transform: scale(0.98);
+    }
+
+#mensaje {
+    text-align: center;
+    color: #059669;
+    font-weight: 600;
+    margin-top: 15px;
+}

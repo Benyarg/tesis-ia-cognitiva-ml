@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Test Cognitivo";
+}
+<link href="~/css/views-investigacion/test-cognitivo.css" rel="stylesheet" />
+
+<div class="test-container">
+    <div class="instruction-card">
+        <h2>Test de Reacción</h2>
+        <p style="color: #475569; font-size: 0.95rem; font-weight: 500; line-height: 1.4;">
+            Toca el cuadro cuando cambie a verde. <br>
+            Debes completar un total de <span class="intentos-badge">3 intentos</span>.
+        </p>
+    </div>
+
+    <button type="button" class="btn-start-light" id="btnIniciarTest">
+    PREPARAR TEST
+</button>
+
+    <div id="box" class="bg-waiting">
+        ...
+    </div>
+
+    <div class="results-panel">
+        <p id="resultado"></p>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/views-investigacion/test-cognitivo.js" defer></script>
+}

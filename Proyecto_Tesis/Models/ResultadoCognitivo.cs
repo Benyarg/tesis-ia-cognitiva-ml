@@ -1,0 +1,11 @@
+namespace Proyecto_Tesis.Models
+{
+    public class ResultadoCognitivo
+    {
+        public int Id { get; set; }
+        public string UserToken { get; set; } = string.Empty;
+
+        public double LatenciaMs { get; set; }
+        public DateTime Fecha { get; set; }
+    }
+}

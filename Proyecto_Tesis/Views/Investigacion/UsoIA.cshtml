@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Uso de IA";
+}
+<link href="~/css/views-investigacion/uso-ia.css" rel="stylesheet" />
+
+<div class="ia-container">
+    <div class="header-card">
+        <h2>Uso de Inteligencia Artificial</h2>
+        <p style="color: #475569; font-size: 0.9rem;">
+            Cuéntanos sobre tu interacción diaria con herramientas de IA.
+        </p>
+    </div>
+
+    <form id="formUsoIA">
+        <div class="input-group">
+            <label for="horas">¿Cuántas horas al día usas IA?</label>
+            <input type="number" id="horas" min="0" max="24" placeholder="Ej. 2" required />
+        </div>
+
+        <div class="input-group">
+            <label for="dias">¿Cuántos días a la semana usas IA?</label>
+            <input type="number" id="dias" min="1" max="7" placeholder="Ej. 5" required />
+        </div>
+
+        <div class="input-group">
+            <label>Tipo de uso predominante:</label>
+            <div class="radio-card-group">
+                <input type="radio" name="tipoUso" id="usoApoyo" value="Apoyo" required>
+                <label for="usoApoyo" class="radio-label">
+                    📘 Apoyo académico (consultas, resúmenes)
+                </label>
+
+                <input type="radio" name="tipoUso" id="usoReemplazo" value="Reemplazo">
+                <label for="usoReemplazo" class="radio-label">
+                    🤖 Automatización total (resuelve por ti)
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-guardar">Guardar y Continuar</button>
+    </form>
+
+    <p id="mensaje"></p>
+</div>
+
+@section Scripts {
+    <script src="~/js/views-investigacion/uso-ia.js" defer></script>
+}

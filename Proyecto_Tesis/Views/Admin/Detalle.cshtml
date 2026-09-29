@@ -1,0 +1,19 @@
+@model Proyecto_Tesis.ViewModels.Admin.ParticipanteDetalleViewModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = $"Participante {Model.Codigo}";
+}
+<div class="detail-header">
+    <div><span class="admin-eyebrow">Registro anonimizado</span><h2>@Model.Codigo</h2><p>Registrado @Model.FechaRegistro.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</p></div>
+    <span class="risk-pill @(Model.Nivel == "ALTO" ? "high" : Model.Nivel == "BAJO" ? "low" : "neutral")">@Model.Nivel</span>
+</div>
+
+<div class="detail-grid">
+    <section class="panel-card"><h3>Consentimiento</h3><dl><dt>Estado</dt><dd>@(Model.ConsentimientoAceptado ? "Aceptado" : "No registrado")</dd><dt>Fecha</dt><dd>@(Model.FechaConsentimiento?.ToLocalTime().ToString("dd/MM/yyyy HH:mm") ?? "—")</dd></dl></section>
+    <section class="panel-card"><h3>Evaluación cognitiva</h3><dl><dt>Latencia media</dt><dd>@(Model.LatenciaMs?.ToString("0.0") ?? "—") ms</dd><dt>Fecha</dt><dd>@(Model.FechaCognitivo?.ToLocalTime().ToString("dd/MM/yyyy HH:mm") ?? "—")</dd></dl></section>
+    <section class="panel-card"><h3>Evaluación emocional</h3><dl><dt>Estrés</dt><dd>@(Model.Estres?.ToString() ?? "—")</dd><dt>Ansiedad</dt><dd>@(Model.Ansiedad?.ToString() ?? "—")</dd><dt>Depresión</dt><dd>@(Model.Depresion?.ToString() ?? "—")</dd></dl></section>
+    <section class="panel-card"><h3>Uso de IA</h3><dl><dt>Horas diarias</dt><dd>@(Model.HorasUsoDiario?.ToString() ?? "—")</dd><dt>Días por semana</dt><dd>@(Model.DiasSemana?.ToString() ?? "—")</dd><dt>Tipo</dt><dd>@(Model.TipoUso ?? "—")</dd></dl></section>
+    <section class="panel-card"><h3>Usabilidad SUS</h3><dl><dt>Puntaje</dt><dd>@(Model.PuntajeSus?.ToString("0.0") ?? "—")</dd><dt>Fecha</dt><dd>@(Model.FechaSus?.ToLocalTime().ToString("dd/MM/yyyy HH:mm") ?? "—")</dd></dl></section>
+    <section class="panel-card"><h3>Resultado predictivo</h3><dl><dt>Nivel</dt><dd><strong>@Model.Nivel</strong></dd><dt>Fecha</dt><dd>@(Model.FechaPrediccion?.ToLocalTime().ToString("dd/MM/yyyy HH:mm") ?? "—")</dd></dl><p class="panel-note">Resultado de detección temprana; no constituye diagnóstico clínico.</p></section>
+</div>
+<a asp-action="Participantes" class="btn btn-outline-secondary mt-3">Volver a participantes</a>

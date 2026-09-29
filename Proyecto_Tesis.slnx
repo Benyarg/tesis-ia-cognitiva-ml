@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Proyecto_Tesis/Proyecto_Tesis.csproj" />
+  <Project Path="Proyecto_Tesis.Tests/Proyecto_Tesis.Tests.csproj" />
+</Solution>

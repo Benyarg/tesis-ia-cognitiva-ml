@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+<link href="~/css/home/style-index.css" rel="stylesheet" />
+<div class="main-wrapper">
+    <div class="card-evaluacion">
+        <div class="icon-header">
+            <img src="~/img/brand/logo.png"
+                 alt="Logo IA Cognitiva"
+                 class="home-brand-logo" />
+        </div>
+        <h2>Evaluación de investigación</h2>
+        <p class="description">
+            Participarás en una evaluación de indicadores cognitivos y emocionales relacionados con el uso de inteligencia artificial generativa.
+            El proceso es anónimo y se utiliza únicamente con fines académicos.
+        </p>
+        <div class="consent-card" id="consentCard">
+            <input type="checkbox" id="consentimiento">
+            <label for="consentimiento" class="consent-text">
+                Acepto participar en el estudio y autorizo el uso de mis datos con fines académicos, conforme al consentimiento informado.
+            </label>
+        </div>
+        <button type="button" class="btn-iniciar" id="btnIniciar">
+            Comenzar evaluación
+        </button>
+        <p id="mensaje" role="status" aria-live="polite"></p>
+    </div>
+</div>
+@section Scripts { <script src="~/js/home/home.js" defer></script> }
