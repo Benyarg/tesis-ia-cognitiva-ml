@@ -12,21 +12,13 @@
 
   <ItemGroup>
 
-    <PackageReference
-        Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore"
-        Version="10.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.12" />
 
-    <PackageReference
-        Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore"
-        Version="10.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.12" />
 
-    <PackageReference
-        Include="Microsoft.EntityFrameworkCore.SqlServer"
-        Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.12" />
 
-    <PackageReference
-        Include="Microsoft.EntityFrameworkCore.Tools"
-        Version="10.0.12">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.12">
 
       <PrivateAssets>all</PrivateAssets>
 
@@ -41,36 +33,23 @@
 
     </PackageReference>
 
-    <PackageReference
-        Include="Microsoft.ML"
-        Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML" Version="5.0.0" />
 
-    <PackageReference
-        Include="Microsoft.ML.FastTree"
-        Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="5.0.0" />
 
-    <PackageReference
-        Include="Microsoft.VisualStudio.Web.CodeGeneration.Design"
-        Version="10.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
 
     <!-- Corrección de vulnerabilidades transitivas NU1901 -->
 
-    <PackageReference
-        Include="NuGet.Packaging"
-        Version="7.9.0"
-        PrivateAssets="all" />
+    <PackageReference Include="NuGet.Packaging" Version="7.9.0" PrivateAssets="all" />
 
-    <PackageReference
-        Include="NuGet.Protocol"
-        Version="7.9.0"
-        PrivateAssets="all" />
+    <PackageReference Include="NuGet.Protocol" Version="7.9.0" PrivateAssets="all" />
 
   </ItemGroup>
 
   <ItemGroup>
 
-    <None Include="MLModel.mlnet"
-          Condition="Exists('MLModel.mlnet')">
+    <None Include="MLModel.mlnet" Condition="Exists('MLModel.mlnet')">
 
       <CopyToOutputDirectory>
         PreserveNewest
