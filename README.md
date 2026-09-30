@@ -1,20 +1,75 @@
-# Plataforma Web con Machine Learning para predicción y detección temprana
+# IA Cognitiva
 
-Proyecto de tesis orientado a la predicción y detección temprana de indicadores relacionados con deterioro cognitivo y emocional en estudiantes universitarios.
+Plataforma web con Machine Learning orientada a la predicción y
+detección temprana de indicadores cognitivos y emocionales en
+estudiantes universitarios.
 
-> Los resultados generados por la plataforma son de carácter predictivo y de detección temprana. No constituyen un diagnóstico clínico ni sustituyen una evaluación profesional especializada.
+> Los resultados generados por la plataforma son predictivos y de
+> detección temprana. No constituyen un diagnóstico clínico ni
+> sustituyen una evaluación profesional especializada.
 
-## Estado de esta entrega
+## Estado del proyecto
 
-Base segura corregida posterior a la auditoría inicial. Incluye saneamiento de secretos/configuración, correcciones críticas del flujo web y controles de seguridad. Las decisiones metodológicas del modelo ML todavía requieren validación académica antes de considerarse definitivas.
+La aplicación cuenta actualmente con:
 
-## Configuración inicial
+- flujo completo de evaluación para participantes;
+- consentimiento informado;
+- prueba cognitiva;
+- evaluación emocional;
+- cuestionario de uso de IA;
+- evaluación SUS;
+- generación de resultados;
+- panel administrativo protegido;
+- gestión anonimizada de participantes;
+- entrenamiento y evaluación del modelo ML;
+- ASP.NET Core Identity y autorización por roles;
+- protección antiforgery y rate limiting;
+- pruebas automatizadas;
+- integración continua con GitHub Actions;
+- análisis de dependencias con Dependabot;
+- despliegue demostrativo en Microsoft Azure.
 
-Consulta `Proyecto_Tesis/README_CONFIGURACION_SEGURA.md` antes de ejecutar la aplicación o crear un repositorio Git nuevo.
+## Tecnologías
 
-## Documentación incluida
+- .NET 10
+- ASP.NET Core MVC
+- C#
+- Entity Framework Core
+- ASP.NET Core Identity
+- ML.NET
+- SQL Server / Azure SQL
+- Bootstrap
+- JavaScript
+- MSTest
+- GitHub Actions
+- Microsoft Azure
 
-- `README_AUDITORIA_INICIAL.md`
-- `Proyecto_Tesis/README_SEGURIDAD.md`
-- `Proyecto_Tesis/README_DEBUGGING.md`
-- `Proyecto_Tesis/README_CONFIGURACION_SEGURA.md`
+## Entorno demostrativo
+
+El proyecto dispone de una instancia pública destinada exclusivamente
+a demostración y pruebas de funcionamiento.
+
+Los datos generados en dicho entorno no forman parte automáticamente
+de la muestra oficial de investigación.
+
+## Seguridad
+
+Los secretos y cadenas de conexión no forman parte del repositorio.
+
+En desarrollo se utilizan User Secrets y en producción las
+configuraciones se administran desde el entorno de Azure.
+
+## Machine Learning
+
+El sistema permite entrenar y evaluar un modelo utilizando los datos
+disponibles en el entorno correspondiente.
+
+Las métricas obtenidas en el entorno demostrativo no representan la
+validación experimental definitiva de la investigación.
+
+## Documentación
+
+La documentación técnica adicional se encuentra en `/docs`.
+
+La auditoría inicial se conserva como registro histórico de la
+evolución técnica del proyecto.
