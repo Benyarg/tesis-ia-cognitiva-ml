@@ -1,30 +1,89 @@
 @model Proyecto_Tesis.ViewModels.Auth.AdminLoginViewModel
+
 @{
     Layout = "_AdminLoginLayout";
     ViewData["Title"] = "Acceso administrativo";
 }
-<div class="login-card">
-    <div class="login-brand">
-    <img src="~/img/brand/logo.png"
-         class="login-brand-logo"
-         alt="Logo IA Cognitiva" />
-</div>
-    <p class="admin-eyebrow">Área restringida</p>
-    <h1>Acceso administrativo</h1>
-    <p class="login-subtitle">Este acceso está reservado para la gestión de la investigación.</p>
 
-    <form method="post" asp-controller="AdminAccount" asp-action="Login" novalidate>
-        <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+<div class="login-card">
+
+    <div class="login-brand">
+        <img src="~/img/brand/logo.png"
+             class="login-brand-logo"
+             alt="IA Cognitiva" />
+    </div>
+
+    <div class="text-center mb-3">
+        <span class="badge rounded-pill text-bg-light border">
+            Entorno demo
+        </span>
+    </div>
+
+    <p class="admin-eyebrow text-center">
+        Área restringida
+    </p>
+
+    <h1 class="text-center">
+        Acceso administrativo
+    </h1>
+
+    <p class="login-subtitle text-center">
+        Acceso reservado al panel de administración de IA Cognitiva.
+    </p>
+
+    <form method="post"
+          asp-controller="AdminAccount"
+          asp-action="Login"
+          novalidate>
+
+        <div asp-validation-summary="ModelOnly"
+             class="text-danger small mb-3">
+        </div>
+
         <div class="mb-3">
-            <label asp-for="Email" class="form-label"></label>
-            <input asp-for="Email" class="form-control" autocomplete="username" />
-            <span asp-validation-for="Email" class="text-danger small"></span>
+            <label asp-for="Email"
+                   class="form-label">
+            </label>
+
+            <input asp-for="Email"
+                   class="form-control"
+                   autocomplete="username"
+                   placeholder="Correo administrativo" />
+
+            <span asp-validation-for="Email"
+                  class="text-danger small">
+            </span>
         </div>
+
         <div class="mb-4">
-            <label asp-for="Password" class="form-label"></label>
-            <input asp-for="Password" class="form-control" autocomplete="current-password" />
-            <span asp-validation-for="Password" class="text-danger small"></span>
+            <label asp-for="Password"
+                   class="form-label">
+            </label>
+
+            <input asp-for="Password"
+                   class="form-control"
+                   autocomplete="current-password"
+                   placeholder="Contraseña" />
+
+            <span asp-validation-for="Password"
+                  class="text-danger small">
+            </span>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+
+        <button type="submit"
+                class="btn btn-primary w-100">
+            Ingresar al panel
+        </button>
+
     </form>
+
+    <div class="alert alert-light border mt-4 mb-0 small text-muted"
+         role="note">
+
+        Esta instancia corresponde a un entorno demostrativo.
+        Los registros generados desde esta versión no forman parte
+        automáticamente de la muestra oficial de investigación.
+
+    </div>
+
 </div>

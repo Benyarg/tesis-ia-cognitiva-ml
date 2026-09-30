@@ -66,6 +66,10 @@ public sealed class ModelAdminService : IModelAdminService
 
         _context.ResultadosML.Add(resultado);
         await _context.SaveChangesAsync();
-        return (true, "Entrenamiento completado. Las métricas corresponden al conjunto disponible y no deben generalizarse sin validación metodológica.", resultado);
+        return (
+            true,
+            "Entrenamiento completado correctamente. Las métricas corresponden a los datos disponibles en el entorno demostrativo y no representan la validación experimental del estudio.",
+            resultado
+        );
     }
 }
