@@ -57,12 +57,12 @@
 
     <PackageReference
         Include="NuGet.Packaging"
-        Version="6.12.5"
+        Version="7.9.0"
         PrivateAssets="all" />
 
     <PackageReference
         Include="NuGet.Protocol"
-        Version="6.12.5"
+        Version="7.9.0"
         PrivateAssets="all" />
 
   </ItemGroup>
