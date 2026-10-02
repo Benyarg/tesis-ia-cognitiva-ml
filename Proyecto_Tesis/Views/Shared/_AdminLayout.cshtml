@@ -42,7 +42,7 @@
                     <span class="admin-eyebrow">Área privada</span>
                     <h1>@ViewData["Title"]</h1>
                 </div>
-                <span class="admin-user">@User.Identity?.Name</span>
+                <span class="admin-user-label">Administrador</span>
             </header>
             <main class="admin-main">
                 @if (TempData["Success"] is string success) { <div class="alert alert-success">@success</div> }
