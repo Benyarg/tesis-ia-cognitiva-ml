@@ -1,12 +1,17 @@
 # 🧠 IA Cognitiva | Plataforma de Evaluación y Machine Learning
 
+<div align="center">
+
 ![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-MVC_10-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![Entity Framework Core](https://img.shields.io/badge/Entity_Framework_Core-10.0.12-68217A?style=for-the-badge&logo=nuget&logoColor=white)
 ![ML.NET](https://img.shields.io/badge/ML.NET-5.0.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+
 ![SQL Server](https://img.shields.io/badge/SQL_Server-10.0.12-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Azure](https://img.shields.io/badge/Deployment-Microsoft_Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+
+</div>
 
 > **Inteligencia artificial aplicada a la evaluación y detección temprana de indicadores cognitivos y emocionales en estudiantes universitarios.**
 >
@@ -15,7 +20,7 @@
 <p align="center">
   <a href="https://github.com/Benyarg/tesis-ia-cognitiva-ml"><strong>💻 Ver repositorio en GitHub</strong></a>
   ·
-  <strong>🌐 Entorno demostrativo en Microsoft Azure</strong>
+  <a href="https://plataformaia-f6gxc2bhc3g3e4cv.eastus2-01.azurewebsites.net/"><strong>🌐 Entorno demostrativo en Microsoft Azure</strong></a>
 </p>
 
 > **Aviso importante:** Los resultados generados por la plataforma tienen carácter predictivo y de detección temprana. No constituyen un diagnóstico clínico ni sustituyen una evaluación realizada por profesionales especializados.
